@@ -8,4 +8,4 @@
 💡 Demonstrated ability to create engaging and intuitive web applications aligned with industry standards.
 Excited to share my passion for frontend development! 🚀
 
-#####  For Project Link [Click here](https://sparkling-chebakia-f03cbb.netlify.app/)  
+##### 🌐 Website link [Click here](https://sparkling-chebakia-f03cbb.netlify.app/)  
