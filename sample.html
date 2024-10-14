@@ -7,7 +7,11 @@
     <h1>four</h1>
     <h1>five</h1>
 </div>
-
+<div id="box" onclick="showChild">
+    <p>child 1</p>
+    <p>child 2</p>
+    <p>child 3</p>
+</div>
 <script>
     var enteredtxt = ""
     var container = document.querySelector("div")
@@ -29,5 +33,13 @@
     }
 
         
+    }
+
+    function showChild() {
+        var parent = document.getElementById("box");
+        var child = parent.children;
+        for (let i = 0; i < child.length; i++) { // Changed <= to <
+            console.log(`${i} this to ${child[i].textContent}`); // Added .textContent to display the text
+        }
     }
 </script>
