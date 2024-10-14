@@ -14,9 +14,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
-    <!--css file link-->
-    <link rel="stylesheet" href="style.css">
-
+    <!-- CSS file link -->
+    <link rel="stylesheet" href="css/style.css">
+    
     <!-- Font Awesome    -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
@@ -32,6 +32,7 @@
         <div class="navbar-links">
             <p class="navbar-link"><a href="index.html">Home</a></p>
             <p class="navbar-link"><a href="collection.html">Collection</a></p>
+            <p class="navbar-link"><a href="cart.html">Mycart</a></p>
             <p class="navbar-link"><a href="contact.html">Contact</a></p>
         </div>
 
@@ -62,91 +63,119 @@
         </form>
         <!--product lists-->
         <div class="products" id="products">
-            <div class="products-box">
+            <div class="products-box" id="product1">
                 <img src="collectionimg/imresizer-1705845080684.jpg" alt="">
-                <p>Black T-Shirt</p>
+                <p class="product-name">Black T-Shirt</p>
+                <p class="product-price">&#x20B9; 498</p>
+                <button type="button" onclick="addToCart(this)" class="add-to-cart-btn">Add to cart</button>
             </div>
 
-            <div class="products-box">
+            <div class="products-box" id="product2">
                 <img src="collectionimg\imresizer-1705846267382.jpg" alt="">
-                <p>CRAZYMONK Anime Hoodie</p>
+                <p class="product-name">CRAZYMONK Anime Hoodie</p>
+                <p class="product-price">&#x20B9; 794</p>
+                <button type="button" onclick="addToCart(this)" class="add-to-cart-btn">Add to cart</button>
             </div>
 
-            <div class="products-box">
+            <div class="products-box" id="product3">
                 <img src="collectionimg\imresizer-1705845932004.jpg" alt="">
-                <p>Hoodie BAT Man's Edition</p>
+                <p class="product-name">Hoodie BAT Man's Edition</p>
+                <p class="product-price">&#x20B9; 985</p>
+                <button type="button" onclick="addToCart(this)" class="add-to-cart-btn">Add to cart</button>
             </div>
 
-            <div class="products-box">
+            <div class="products-box" id="product4">
                 <img src="collectionimg\imresizer-1705845743908.jpg" alt="">
-                <p>Vans sneakers</p>
+                <p class="product-name">Vans sneakers</p>
+                <p class="product-price">&#x20B9; 1,950</p>
+                <button type="button" onclick="addToCart(this)" class="add-to-cart-btn">Add to cart</button>
             </div>
 
-            <div class="products-box">
+            <div class="products-box" id="product5">
                 <img src="collectionimg/imresizer-1705846130271.jpg" alt="">
-                <p>Generic Winter man's Cap</p>
+                <p class="product-name">Generic Winter man's Cap</p>
+                <p class="product-price">&#x20B9; 320</p>
+                <button type="button" onclick="addToCart(this)" class="add-to-cart-btn">Add to cart</button>
             </div>
 
-            <div class="products-box">
+            <div class="products-box" id="product6">
                 <img src="collectionimg\imresizer-1705846823919.jpg" alt="">
-                <p>GRECIILOOKS Men Casual Pants</p>
+                <p class="product-name">GRECIILOOKS Men Casual Pants</p>
+                <p class="product-price">&#x20B9; 900</p>
+                <button type="button" onclick="addToCart(this)" class="add-to-cart-btn">Add to cart</button>
             </div>
 
-            <div class="products-box">
+            <div class="products-box" id="product7">
                 <img src="collectionimg\imresizer-1705846955607.jpg" alt="">
-                <p>Timex Long Last-Ten Year Battery Life Analog Silver Dial Men's Watch-TWEG17705</p>
+                <p class="product-name">Timex Long Last-Ten Year Battery Life Analog Silver Dial Men's Watch-TWEG17705</p>
+                <p class="product-price">&#x20B9; 1,799</p>
+                <button type="button" onclick="addToCart(this)" class="add-to-cart-btn">Add to cart</button>
             </div>
 
-            <div class="products-box">
+            <div class="products-box" id="product8">
                 <img src="collectionimg\imresizer-1705847085161.jpg" alt="">
-                <p>Women Floral Printed Round Neck A-line Dress</p>
+                <p class="product-name">Women Floral Printed Round Neck A-line Dress</p>
+                <p class="product-price">&#x20B9; 2,544</p>
+                <button type="button" onclick="addToCart(this)" class="add-to-cart-btn">Add to cart</button>
             </div>
 
-            <div class="products-box">
+            <div class="products-box" id="product9">
                 <img src="collectionimg\imresizer-1705847341506.jpg" alt="">
-                <p>Women Embroidered Tiered Dress</p>
+                <p class="product-name">Women Embroidered Tiered Dress</p>
+                <p class="product-price">&#x20B9; 2,899</p>
+                <button type="button" onclick="addToCart(this)" class="add-to-cart-btn">Add to cart</button>
             </div>
 
-            <div class="products-box">
+            <div class="products-box" id="product10">
                 <img src="collectionimg\imresizer-1705847598152.jpg" alt="">
-                <p>Puma Men's Softride Slide Massage Sandal</p>
+                <p class="product-name">Puma Men's Softride Slide Massage Sandal</p>
+                <p class="product-price">&#x20B9; 2,799</p>
+                <button type="button" onclick="addToCart(this)" class="add-to-cart-btn">Add to cart</button>
             </div>
 
-            <div class="products-box">
+            <div class="products-box" id="product11">
                 <img src="collectionimg\imresizer-1705847728692.jpg" alt="">
-                <p>Marc Loire Women's Slip On Shimmer Peep Toes Block Heel Fashion Sandals for Casual, Outdoor, Party
+                <p class="product-name">Marc Loire Women's Slip On Shimmer Peep Toes Block Heel Fashion Sandals for Casual, Outdoor, Party
                     and Holidays</p>
+                    <p class="product-price">&#x20B9; 2,199</p>
+                    <button type="button" onclick="addToCart(this)" class="add-to-cart-btn">Add to cart</button>
             </div>
 
-            <div class="products-box">
+            <div class="products-box" id="product12">
                 <img src="collectionimg\imresizer-1705847953433.jpg" alt="">
-                <p>Men Solid Athleisure Track Pants
+                <p class="product-name">Men Solid Athleisure Track Pants
                 </p>
+                <p class="product-price">&#x20B9; 898</p>
+                <button type="button" onclick="addToCart(this)" class="add-to-cart-btn">Add to cart</button>
             </div>
 
-            <div class="products-box">
+            <div class="products-box" id="product13">
                 <img src="collectionimg\imresizer-1705848068174.jpg" alt="">
-                <p>Girls Graphic Printed Pure Cotton T-shirt</p>
+                <p class="product-name">Girls Graphic Printed Pure Cotton T-shirt</p>
+                <p class="product-price">&#x20B9; 419</p>
+                <button type="button" onclick="addToCart(this)" class="add-to-cart-btn">Add to cart</button>
             </div>
 
-            <div class="products-box">
+            <div class="products-box" id="product14">
                 <img src="collectionimg\imresizer-1705848659557.jpg" alt="">
-                <p>Veirdo® Floral Printed Polyester Half Sleeve Spread Collar Shirt for Men</p>
+                <p class="product-name">Veirdo® Floral Printed Polyester Half Sleeve Spread Collar Shirt for Men</p>
+                <p class="product-price">&#x20B9; 1,499</p>
+                <button type="button" onclick="addToCart(this)" class="add-to-cart-btn">Add to cart</button>
             </div>
 
-            <div class="products-box">
+            <div class="products-box" id="product15">
                 <img src="collectionimg\imresizer-1705848200866.jpg" alt="">
-                <p>Girls Printed Hooded Jacket</p>
+                <p class="product-name">Girls Printed Hooded Jacket</p>
+                <p class="product-price">&#x20B9; 1,299</p>
+                <button type="button" onclick="addToCart(this)" class="add-to-cart-btn">Add to cart</button>
             </div>
 
-            <div class="products-box">
+            <div class="products-box" id="product16">
                 <img src="collectionimg\imresizer-1705848828491.jpg" alt="">
-                <p>blackberrys Men's Casual B-91 Skinny Fit Non-Stretch Khakis-EK-SO-CULTRANE</p>
+                <p class="product-name">blackberrys Men's Casual B-91 Skinny Fit Non-Stretch Khakis-EK-SO-CULTRANE</p>
+                <p class="product-price">&#x20B9; 1,499</p>
+                <button type="button" onclick="addToCart(this)" class="add-to-cart-btn">Add to cart</button>
             </div>
-
-
-
-
 
         </div>
 
@@ -175,8 +204,10 @@
 
     <!--JS script-->
 
-    <script src="collection.js"></script>
-    <script src="index.js"></script>
+    <script src="js\index.js"></script>
+    <script src="js\collection.js"></script>
+    <script src="js\cart.js"></script>
+
 
 
 </body>
