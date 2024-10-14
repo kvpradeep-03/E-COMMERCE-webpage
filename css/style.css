@@ -1,0 +1,390 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+/*Home page styles*/
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    
+} 
+
+.navbar-links{
+    display: flex;
+    column-gap: 20px;
+}
+
+
+.navbar-links a{
+    text-decoration: none;
+    color: #1d232c;
+
+
+}
+
+.navbar-links a:hover{
+    text-decoration: underline;
+}
+
+.navbar-menu-toggle{
+    display: none;
+}
+
+.side-navbar{
+    background-color: #1d232c;
+    width: 50%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -60%;
+    padding: 20px;
+    color: white;
+    transition: 2s;
+     
+}
+
+.side-navbar-link{
+    margin-bottom: 30px;
+}
+
+.side-navbar-links a{
+    text-decoration: none;
+    color: white;
+}
+
+.side-navbar-links a:hover{
+    text-decoration:underline;
+    color: white;
+    
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px;
+}
+
+.header-button{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    background-color: #1d232c;
+    cursor: pointer;
+    color: white;
+
+}
+
+.service{
+    padding: 20px;
+}
+
+.service-container-1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service-container-2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.service-container-2 div{
+    border-radius: 5px;
+    background-color: #f2f4f7;
+    padding: 10px;
+}
+
+.new-arrival{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+
+.new-arrival-container{
+    position: relative;
+    flex-basis: 20%;
+    
+}
+
+.new-arrival-container img{
+    border-radius: 10px;
+    border: none;
+}
+
+.new-arrival button{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-top: 10px;
+    color: #1d232c;
+    position: absolute;
+    top: 50%;
+    left: 18%;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+}
+.new-arrival button:hover{
+    background-color: #1d232c;
+    transition: 2ms;
+    transition-timing-function: ease-in-out;
+    color: #f2f4f7;
+    
+}
+
+.news{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.news input{
+    padding: 11px;
+    width: 80vw;
+    margin-bottom: 10px;
+    border: solid black 3px;
+}
+
+.news button{
+    margin-top: 10px;
+    color: #f2f4f7;
+    background-color: #1d232c;
+    border-radius: 10px;
+    padding: 10px;
+} 
+.footer{
+    margin-top: 20px;
+    padding: 40px;
+    background-color: #1d232c;
+    color: #f2f4f7;
+    
+}
+
+.footer-icon-container i{
+    margin-right: 8px;
+}
+
+/*Collection page styles*/
+
+.product-section{
+    margin-top: 20px;
+}
+
+.product-search{
+    width: 80%;
+    border:solid black 2px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin:auto;    
+}
+
+.product-search input{
+    border: none;
+    background-color: transparent;
+    width: 100px;
+}
+
+.product-search input:focus{
+    outline: none;
+}
+
+
+.products{
+    padding: 20px;
+    display:flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   
+}
+.products-box{
+    text-align: center;
+    flex-basis: 20%;  
+}
+
+.add-to-cart-btn{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.add-to-cart-btn:hover{
+    background-color: #1d232c;
+    transition: 2ms;
+    transition-timing-function: ease-in-out;
+    color: #f2f4f7;
+}
+
+.remove-item{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.remove-item:hover{
+    background-color: #1d232c;
+    transition: 2ms;
+    transition-timing-function: ease-in-out;
+    color: #f2f4f7;
+}
+
+/*Contact page styles*/
+ 
+.contact-box{
+    color: white;
+    background-color: #1d232c;
+    margin-top: 10%;
+    margin-left: 20%; 
+    margin-right: 20%;
+    margin-bottom: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+     
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.name{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 20px;
+    border: none;
+     
+}
+.name:focus{
+    outline: none;
+}
+.email{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 20px;
+    border: none;
+}
+.message{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 20px;
+    height: 20%;
+    border: none;
+}
+.contact-submit-button{
+    margin-top: 10px;
+    padding: 12px;
+    width: 80px;
+    border-radius: 8px;
+    background-color:#5940e9f2;
+    color: white;
+    border: none;
+ 
+}
+
+
+
+
+
+/* Side Navbar*/
+/* Media Query*/
+
+@media screen and (max-width:700px){
+    .navbar-menu-toggle{
+        display: block;
+    }
+    .navbar-links{
+        display: none;
+    }
+    .header-img{
+        display:none;
+         
+    }
+    .service-container-1{
+        display: none;
+    }
+    .service-container-2{
+        flex-direction: column;
+    }
+    .contact{
+         
+        justify-content: center; 
+        padding: 0px;
+        margin-right: 40px;
+         
+        
+    }
+    .contact-box{
+        color: white;
+        padding-right: 15%;
+        padding-left: 10%;
+        color: white;
+        background-color: #1d232c;
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        /* margin-left: 81px; */
+        /* padding: 40px; */
+        /* border-radius: 20px; */
+        /* margin-top: 20px; */
+        
+    }
+    .email{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        padding: 10px;
+        width: 120px;width: 100%;
+        border: none;
+    }
+    .message{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        padding: 10px;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+    .name{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        padding: 10px;
+        width: 100%;
+        border: none;
+         
+    }
+}
