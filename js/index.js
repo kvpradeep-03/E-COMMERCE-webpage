@@ -7,7 +7,7 @@ function showNavbar(event){
 }
 
 function closeNavbar(event){
-    sidenav.style.left = "-60%"
+    sidenav.style.left = "-80%"
 
 }
 
