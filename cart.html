@@ -30,13 +30,12 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <h1>Fusion Cart <i class="fa-solid fa-cart-shopping"></i></i></h1>
-
+        <h2 style="margin-right: 15px;">Fusion Cart <i class="fa-solid fa-cart-shopping"></i></h2>
         <div class="navbar-links">
             <p class="navbar-link"><a href="index.html">Home</a></p>
             <p class="navbar-link"><a href="collection.html">Collection</a></p>
             <p class="navbar-link"><a href="index.html">Mycart</a></p>
-            <p class="navbar-link"><a href="contact.html">Contact</a></p>
+            <p class="navbar-link"><a href="checkout.html">Checkout</a></p>
         </div>
 
         <div class="navbar-menu-toggle" onclick="showNavbar(event)">
@@ -53,19 +52,21 @@
         <div class="side-navbar-links">
             <p class="side-navbar-link"><a href="index.html">Home</a></p>
             <p class="side-navbar-link"><a href="collection.html">Collection</a></p>
-            <p class="side-navbar-link"><a href="contact.html">Contact</a></p>
+            <p class="side-navbar-link"><a href="cart.html">Mycart</a></p>
+            <p class="side-navbar-link"><a href="checkout.html">Checkout</a></p>
         </div>
 
     </div>
     
-    <!--cart-->
-    <div id="cartDisplay" class="row">
+    <!--cart  TODO: DO RESPONSIVE VIEW FOR MOBILE VIEW ALL OTHER ARE OK-->
+    <br>
+    <center>
+        <div class="row" style="width: 80%;" id="cartDisplay">
+ 
+        </div>
+    </center>
 
-    </div>
-
-
-
-    <!--Footer-->
+    <!-- Footer
     <div class="footer">
         <div class="footer-container">
             <div class="footer-box-1">
@@ -82,13 +83,15 @@
 
         </div>
 
-    </div>
+    </div> -->
 
 
     <!--JS script-->
+
     <script src="js\index.js"></script>
     <script src="js\collection.js"></script>
     <script src="js\cart.js"></script>
+    <script src="js\checkout.js"></script>
 
 
 </body>
