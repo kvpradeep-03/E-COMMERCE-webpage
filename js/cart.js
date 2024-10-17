@@ -8,25 +8,36 @@ function addToCart(button) {
         var productName = product.querySelector(".product-name").textContent;
         var productPrice = product.querySelector(".product-price").textContent;
         
-        // Create a product object
+        // Create a product object and assing the extrated details of selected product
         var productData = {
             image: productImage,
             name: productName,
             price: productPrice
         };
 
-        // Get the existing cart data from localStorage (if any)
-        //JSON.parse converts the sting into arrays
+        // Get the existing cart data from localStorage if any,else it assigns the cart into empty array
+        //JSON.parse converts the string into arrays bcoz in localStorage datas are stored in string format
         var cart = JSON.parse(localStorage.getItem("cartItems")) || [];
 
         // Add the new product to the cart array
         cart.push(productData);
 
         // Save the updated cart back to localStorage
+        //JSON.stringify converts the arrays into string
         localStorage.setItem("cartItems", JSON.stringify(cart));
     } else {
         alert("Something went wrong.");
     }
+    
+    // add to car pop-up  
+    // Get the product name from the clicked button's parent
+    let itemName = button.closest('.products-box').querySelector('.product-name').textContent;
+
+    // Update modal body content with a success message
+    let modalBody = document.querySelector('.modal-body');
+    modalBody.innerHTML = `<p>${itemName} has been added to the cart.</p>`;
+ 
+ 
 }
 
 
@@ -34,8 +45,11 @@ function addToCart(button) {
 // Load and display the cart items when the page loads
 window.onload = function() {
     var cartContainer = document.getElementById("cartDisplay");
+
+    //retrieves the cart items from localStorage, converting the string back into an array. If no items exist, it initializes an empty array.
     var cart = JSON.parse(localStorage.getItem("cartItems")) || [];
-        // Check if the cart is empty
+    
+    // Check if the cart is empty
     if (cart === null || cart.length === 0) {
         var purchaseGreet = document.createElement("div")
         purchaseGreet.className = "bg-body-tertiary p-5 rounded";
@@ -54,13 +68,12 @@ window.onload = function() {
     // Loop through cart items and create HTML for each product
     cart.forEach(function(product, index) {
         var productElement = document.createElement("div");
-        productElement.className = "cart-container d-inline-flex flex-lg-row flex-sm-column p-3 modal-body";
+        productElement.className = "cart-container d-inline-flex flex-lg-row flex-sm-column p-3 justify-content-center align-items-center";
         productElement.innerHTML = `
-            <img src="${product.image}" alt="${product.name}" />
-            <p class="product-name mt-3 p-3 mt-sm-2 w-75">${product.name}</p>
-            <p class="product-price mt-3 p-3 mt-sm-2 w-50">${product.price}</p>
-            <button class="remove-item mt-3 h-25 mt-sm-2 btn btn-danger" data-index="${index}">Remove</button>
-
+            <img src="${product.image}" alt="Image of ${product.name}" />
+            <p class="product-name mt-3 p-lg-3 mt-sm-2 p-sm-1 p-md-1 w-75">${product.name}</p>
+            <p class="product-price mt-3 p-lg-3 mt-sm-2 p-sm-1 p-md-1 w-50">${product.price}</p>
+            <button class="remove-item mt-3 h-25 mt-sm-2 p-sm-1 p-md-1 btn btn-danger" data-index="${index}">Remove</button>
         `;
         cartContainer.appendChild(productElement);
     });
@@ -102,7 +115,7 @@ var totalPrice = cart.reduce((acc, product) => {
     // Set the inner HTML for the total
     total.innerHTML = `<h1>Total: &#x20B9; ${totalPrice.toFixed(2)}</h1>            
     <div class="d-flex justify-content-center">
-        <button class="btn btn-primary btn-lg w-25 w-sm-25" type="submit" onclick="window.location.href='checkout.html'">Continue to checkout</button>
+        <button class="btn btn-warning" type="submit" onclick="window.location.href='checkout.html'">Continue to checkout</button>
     </div>`
     ;
     
@@ -112,16 +125,6 @@ var totalPrice = cart.reduce((acc, product) => {
 
 };
 
-// function checkOut(button) {
-//     // Get cart items from localStorage
-//     var cart = JSON.parse(localStorage.getItem("cartItems")) || [];
-    
-//     // Store the cart items into localStorage for the checkout page
-//     localStorage.setItem("checkoutItems", JSON.stringify(cart));
-    
-//     // Redirect to the checkout page
-//     window.location.href = "checkout.html";
-// }
 
 
 
