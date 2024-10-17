@@ -7,6 +7,7 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
+
 /*Home page styles*/
 
 .navbar{
@@ -15,12 +16,13 @@ body{
     align-items: center;
     padding: 10px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-    
+
 } 
 
 .navbar-links{
     display: flex;
     column-gap: 20px;
+    margin-right: 15px;
 }
 
 
@@ -42,13 +44,14 @@ body{
 .side-navbar{
     background-color: #1d232c;
     width: 50%;
-    height: 100%;
+    height: 70%;
     position: fixed;
+    border-bottom-right-radius: 20px;
     top: 0;
     left: -60%;
     padding: 20px;
     color: white;
-    transition: 2s;
+    transition: 1s;
      
 }
 
@@ -61,11 +64,11 @@ body{
     color: white;
 }
 
-.side-navbar-links a:hover{
+/* .side-navbar-links a:hover{
     text-decoration:underline;
     color: white;
     
-}
+} */
 
 .header{
     display: flex;
@@ -258,8 +261,18 @@ body{
     color: #f2f4f7;
 }
 
+ /*Cart css styles*/
+.cart-container{
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between;
+    border: 2px solid #1d232c;
+    border-radius: 15px;
+    margin: 15px;
+   
+}
+
 /*Contact page styles*/
- 
 .contact-box{
     color: white;
     background-color: #1d232c;
@@ -270,7 +283,6 @@ body{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-     
     padding: 40px;
     border-radius: 20px;
     margin-top: 20px;
@@ -310,6 +322,7 @@ body{
     background-color:#5940e9f2;
     color: white;
     border: none;
+    cursor: pointer;
  
 }
 
@@ -386,5 +399,19 @@ body{
         width: 100%;
         border: none;
          
+    }
+    .cart-container .product-name{
+        width: 100% !important; /* Override the Bootstrap width for small screens */
+        padding: 0% !important;
+
+    }
+    .cart-container .product-price{
+        padding: 0% !important;
+
+    }
+}
+@media (max-width: 576px) {
+    .total button {
+        width: 100%; /* Make buttons 100% wide on small screens */
     }
 }
